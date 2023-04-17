@@ -1,15 +1,17 @@
 {% extends "base.html" %}
 
 {% block app_content %}
-    <h1>You're doing it!</h1>
+    <h1>I did it!</h1>
     <br>
     <table class="table table-hover">
+        {% for item in posts %}
         <tr>
             <td>
                 <br>
-                <span id="post1">This is my one and only blog post. Can you add more using a for loop?</span>
+                <span id="post1">UserID: {{item.user_id}} - {{item.body}}</span>
             </td>
         </tr>
+        {% endfor %}
     </table>
     <nav aria-label="...">
         <ul class="pager">
